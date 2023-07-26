@@ -27,31 +27,52 @@ class Channel:
 
     def __add__(self, other):
         """Сложение количества подписчиков двух каналов (self + other)"""
-        return self.subscriber_count + other.subscriber_count
+        if type(other) == Channel:
+            return self.subscriber_count + other.subscriber_count
+        else:
+            raise TypeError
 
     def __sub__(self, other):
         """Вычитание количества подписчиков двух каналов (self - other)"""
-        return self.subscriber_count - other.subscriber_count
+        if type(other) == Channel:
+            return self.subscriber_count - other.subscriber_count
+        else:
+            raise TypeError
 
     def __gt__(self, other):
         """Сравнение количества подписчиков двух каналов (self > other)"""
-        return self.subscriber_count > other.subscriber_count
+        if type(other) == Channel:
+            return self.subscriber_count > other.subscriber_count
+        else:
+            raise TypeError
 
     def __ge__(self, other):
         """Сравнение количества подписчиков двух каналов (self >= other)"""
-        return self.subscriber_count >= other.subscriber_count
+        if type(other) == Channel:
+            return self.subscriber_count >= other.subscriber_count
+        else:
+            raise TypeError
 
     def __lt__(self, other):
         """Сравнение количества подписчиков двух каналов (self < other)"""
-        return self.subscriber_count < other.subscriber_count
+        if type(other) == Channel:
+            return self.subscriber_count < other.subscriber_count
+        else:
+            raise TypeError
 
     def __le__(self, other):
         """Сравнение количества подписчиков двух каналов (self <= other)"""
-        return self.subscriber_count <= other.subscriber_count
+        if type(other) == Channel:
+            return self.subscriber_count <= other.subscriber_count
+        else:
+            raise TypeError
 
     def __eq__(self, other):
         """Сравнение количества подписчиков двух каналов (self == other)"""
-        return self.subscriber_count == other.subscriber_count
+        if type(other) == Channel:
+            return self.subscriber_count == other.subscriber_count
+        else:
+            raise TypeError
 
     def print_info(self) -> None:
         """Выводит в консоль информацию о канале."""
