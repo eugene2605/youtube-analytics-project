@@ -30,7 +30,3 @@ class PLVideo(Video):
     def __init__(self, video_id: str, playlist_id: str) -> None:
         super().__init__(video_id)
         self.playlist_id = playlist_id
-
-    def __str__(self):
-        """Возвращает название ютуб-видео"""
-        return self.title
